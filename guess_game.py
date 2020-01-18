@@ -8,12 +8,14 @@ import sys
 
 val = random.randint(int(sys.argv[1]),int(sys.argv[2]))
 #print(val)  # Cheating
-guess = input("Guess a no: ")
-if val == int(guess):
-    print(f"Perfect! ")
-
-else:
-    print("Try again !!")
+print("Guess a no. between "+ sys.argv[1] + " and " + sys.argv[2] )
+while True:
+    guess = input("> ")
+    if val == int(guess):
+        print(f"Perfect! ")
+        break
+    else:
+        print("Try again !!")
 
 
 
